@@ -1,0 +1,39 @@
+<html DOCTYPE!>
+
+<form action='{{ url_for('userData') }}' method='POST'>
+	First name:<br>
+	<input type="text" name="firstname"><br>
+	Last name:<br>
+	<input type="text" name="lastname"><br>
+	Physical Address:<br>
+	<input type="text" name="physicaladdress"><br>
+	Age:<br>
+	<input type="text" pattern="\d*" name="age"><br>
+	Occupation:<br>
+	<input type="text" name="occupation"><br>
+	ID #:<br>
+	<input type="text" name="IDnumber"><br>
+	Phone Number:<br>
+	<input type="text" name="phoneNumber"><br>
+	When did you join the company:<br>
+	<input type="text" name="time"><br>
+	Net Salary:<br>
+	<input type="text" pattern="\d*" name="netsalary"><br>
+	Type of loan:<br>
+	<select name='loanType'>
+
+		<option value="personal">Personal</option>
+		<option value="home">Home</option>
+		<option value="business">Business</option>
+
+	</select><br>
+
+  <input type="radio" name="gender" value="male" checked> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other<br>
+
+  <input type="submit" value="Submit">
+
+</form>
+
+</html>
