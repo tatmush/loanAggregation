@@ -5,11 +5,11 @@ import os
 
 app = Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLLCHEMY_DATABASE_URI']='sqlite:///' + os.path.join(basedir, 'app.db')
+SQLALCHEMY_DATABASE_URI=os.environ.get('DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'app.db')
 
 db = SQLAlchemy(app)
 migrate=Migrate(app, db)
 from views import *
 
 if __name__ =='__main__':
-	app.run()
+	app.run(debug=True)
